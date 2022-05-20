@@ -10,21 +10,20 @@ powers = ["strength"," speed", "recovery"]
 animal_powers = ["Do you roar like the mighty lion?",
                  "Are you as stealthy as a viper?",
                  "Do you soar like a phoenix?"]
-
+yesno = ["yes", "no"]
 
 
 while guardian_question not in powers:
 
-    guardian_question = input("Want to know what guardian are you? Do you seek strength, 
-    speed or recovery?")
+    guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
 
     if guardian_question.lower() == "strength":
         guardian_question_two = input("Choose yes or no. " + animal_powers[0])
         if guardian_question_two.lower() == "yes":
          print("You stand with the powerful titans")
         elif guardian_question_two.lower() == "no":
-            guardian_question = input("Want to know what guardian are you? Do you seek streng             th, speed or recovery?")
-        elif guardian_question_two.lower() != "yes", "no":
+            guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
+        elif guardian_question_two.lower() not in yesno:
             guardian_question_two = input("Choose yes or no. " + animal_powers[0])
         
     elif guardian_question.lower() == "speed":
@@ -32,8 +31,8 @@ while guardian_question not in powers:
         if guardian_question_two.lower() == "yes":
          print("Fight from the shaddows with the devious hunters")
         elif guardian_question_two.lower() == "no":           
-            guardian_question = input("Want to know what guardian are you? Do you seek streng             th, speed or recovery?")
-        elif guardian_question_two.lower() != "yes", "no":
+            guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
+        elif guardian_question_two.lower() not in yesno:
             guardian_question_two = input("Choose yes or no. " + animal_powers[1])
 
     elif guardian_question.lower() == "recovery":
@@ -41,8 +40,8 @@ while guardian_question not in powers:
         if guardian_question_two.lower() == "yes":
          print("Blast your foes with the mystical warlocks")
         elif guardian_question_two.lower() == "no":                       
-            guardian_question = input("Want to know what guardian are you? Do you seek streng             th, speed or recovery?")
-        elif guardian_question_two.lower() != "yes", "no":
+            guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
+        elif guardian_question_two.lower() not in yesno:
             guardian_question_two = input("Choose yes or no. " + animal_powers[2])
 
 
