@@ -17,39 +17,50 @@ while guardian_question not in powers:
 
     guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
 
-    if guardian_question.lower() == "strength":
+
+if guardian_question.lower() == "strength":
+    while True:
         guardian_question_two = input("Choose yes or no. " + animal_powers[0])
         if guardian_question_two.lower() == "yes":
-         print("You stand with the powerful titans")
+          print("You stand with the powerful titans")
+          break
         elif guardian_question_two.lower() == "no":
-            guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
+            #guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
+            print("You're not worth of this guardian!")
+            break
         elif guardian_question_two.lower() not in yesno:
-            guardian_question_two = input("Choose yes or no. " + animal_powers[0])
-        
-    elif guardian_question.lower() == "speed":
-        guardian_question_two = input("Choose yes or no. " + animal_powers[1])
-        if guardian_question_two.lower() == "yes":
-         print("Fight from the shaddows with the devious hunters")
-        elif guardian_question_two.lower() == "no":           
-            guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
-        elif guardian_question_two.lower() not in yesno:
-            guardian_question_two = input("Choose yes or no. " + animal_powers[1])
+            print("Choose yes or no. " + animal_powers[0])
+    
+if guardian_question.lower() == "speed":
+    while True:
+     guardian_question_two = input("Choose yes or no. " + animal_powers[1])
+     if guardian_question_two.lower() == "yes":
+      print("Fight from the shaddows with the devious hunters")
+      break
+     elif guardian_question_two.lower() == "no":           
+       # guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
+       print("You're not worth of this guardian!")
+    elif guardian_question_two.lower() not in yesno:
+        print("Choose yes or no. " + animal_powers[1])
 
-    elif guardian_question.lower() == "recovery":
-        guardian_question_two = input("Choose yes or no. " + animal_powers[2])
-        if guardian_question_two.lower() == "yes":
-         print("Blast your foes with the mystical warlocks")
-        elif guardian_question_two.lower() == "no":                       
-            guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
-        elif guardian_question_two.lower() not in yesno:
-            guardian_question_two = input("Choose yes or no. " + animal_powers[2])
+if guardian_question.lower() == "recovery":
+    while True:
+     guardian_question_two = input("Choose yes or no. " + animal_powers[2])
+    if guardian_question_two.lower() == "yes":
+     print("Blast your foes with the mystical warlocks")
+     break
+    elif guardian_question_two.lower() == "no":                       
+       # guardian_question = input("Want to know what guardian are you? Do you seek strength, speed or recovery?")
+       print("You're not worth of this guardian!")
+    elif guardian_question_two.lower() not in yesno:
+        print("Choose yes or no. " + animal_powers[2])
 
 
-    elif guardian_question.lower() not in powers:
-                                    # I tweaked this condition to check if the correct
-                                    # answer was in this list of correct answers or not
-        guardian_question = input("Try only seeking strength, speed, or recovery")
+elif guardian_question.lower() not in powers:
+                                # I tweaked this condition to check if the correct
+                                # answer was in this list of correct answers or not
+    guardian_question = input("Try only seeking strength, speed, or recovery")
 
-        # looks good! you could reuse this code and ask a few more questions very easily!
-        # try for three
+    # looks good! you could reuse this code and ask a few more questions very easily!
+    # try for three
 
