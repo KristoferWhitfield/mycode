@@ -27,7 +27,7 @@ pods to get to saftey. Hide if you can if the alien is in the room.
 Commands:
   go [direction]
   get [item]
-  hide [hide]
+  hide [hidingspot]
 ''')
 
 def showStatus():
@@ -49,34 +49,32 @@ inventory = []
 rooms = {
 
             'Crew Quarters' : {
-                  'south' : 'Kitchen',
-                  'east'  : 'Dining Room',
-                  'item'  : 'key'
+                  'south' : 'Main Hall'
                 },
             'Main Hall' : {
-                  'north' : 'Hall',
-                  'item'  : 'monster',
+                  'east' : 'Captains Quarters', 
+                  'west' : 'Labs',
+                  'south': 'Transportation Hub',
                 },
             'Waste Disposal' : {
-                  'north' : 'Hall',
+                  'east' : 'Transportation Hub' 
                   'item'  : 'monster',
                 },
             'Labs' : {
-                  'west' : 'Hall',
-                  'south': 'Garden',
-                  'item' : 'potion',
-                  'north' : 'Pantry',
+                  'east' : 'Main Hall',
+                  'item' : 'HBr acid'
                },
             'Captains Quarters' : {
-                  'north' : 'Dining Room'
+                  'west' : 'Main Hall'
+                  'item' : 'keycard'
                },
             'Transportation Hub' : {
-                  'south' : 'Dining Room',
-                  'item' : 'cookie',
+                  'north' : 'Main Hall',
+                  'south' : 'Escape Pods',
+                  'west' : 'Waste Disposal', 
             },
             'Escape Pods' : {
-                  'south' : 'Dining Room',
-                  'item' : 'cookie',
+                  'terminal' : 'cookie',
 
          }
         },
