@@ -23,7 +23,7 @@ Alien
                  
 
 You are an engineer on the ship U.S.S. Sulaco, there's an alien on board. Reach the escape
-pods to get to saftey. Hide if you can if the alien is in the room. 
+pods to get to saftey. Make sure to check rooms for items. 
 Commands:
   go [direction]
   get [item]
@@ -84,7 +84,9 @@ rooms = {
                   'item' : 'keycard',
 
          }
-        },
+        }
+
+
 #start the player in the Hall
 currentRoom = 'Crew Quarters'
 
@@ -92,7 +94,6 @@ showInstructions()
 
 #loop forever
 while True:
-
   showStatus()
   #get the player's next 'move'
   #.split() breaks it up into an list array
@@ -201,7 +202,7 @@ while True:
     break
 
   ## If a player enters a room with a monster
-if currentRoom == 'Waste Disposal' and 'HBr' not in inventory:
+  if currentRoom == 'Waste Disposal' and 'HBr' not in inventory:
     print('''
     The xenomorph got you GAME OVER
             .---._
@@ -272,4 +273,5 @@ if currentRoom == 'Waste Disposal' and 'HBr' not in inventory:
    /   `-._,'  ..  ` _.-'
   (     _,'``------''  SSt
    `--''
-                              ''') break
+                              ''')
+     break
